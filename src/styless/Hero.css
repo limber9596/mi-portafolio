@@ -1,0 +1,80 @@
+.hero {
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--color-red);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.hero-img {
+  width: 200px;
+  border-radius: 3px;
+  margin-bottom: 25px;
+
+  /* Desvanecido en lados: izquierda, derecha y abajo */
+  mask-image:
+    linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%),   /* borde abajo */
+    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%),  /* borde izquierda */
+    linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%);   /* borde derecha */
+  -webkit-mask-image:
+    linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%),
+    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%),
+    linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%);
+  
+  mask-composite: intersect;
+  -webkit-mask-composite: destination-in;
+}
+
+
+
+h1{
+  margin-bottom: 10px;
+  color: aliceblue;
+}
+
+.animated-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  background-size: 400% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  white-space: nowrap; /* evita salto en pantallas grandes */
+  display: inline-block;
+  text-align: center;
+}
+
+.animated-text .line {
+  display: inline;
+  margin: 0 0.3rem;
+}
+
+/* Para pantallas de 480px o menos */
+@media (max-width: 480px) {
+  .animated-text {
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .animated-text .line {
+    display: block;
+    margin: 0.3rem 0;
+  }
+}

@@ -1,0 +1,54 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out; /* <-- animación suave */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links-desktop {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem; /* separación entre enlaces */
+  position: static;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  background: transparent;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links-desktop a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+}
+
+.nav-links-desktop a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ff4757;
+  transition: width 0.3s ease;
+}
+
+.nav-links-desktop a:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-red: #b44158;
+  --color-dark: #222;
+  --color-dark-red:#282020;
+  --color-dark-red2: #6f5353;
+  --color-blue: #5d95d2;
+}
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #2C2C2C, #0D1B2A, #1B263B);
+  background-size: 300% 300%;
+  animation: moveBackground 20s ease infinite;
+  background-attachment: fixed;
+}
+
