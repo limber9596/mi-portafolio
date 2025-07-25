@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import '../styless/Hero.css'
+import "../styless/Global.css"
 
 export default function Hero() {
   return (
@@ -25,7 +26,7 @@ export default function Hero() {
       />
 
       <motion.h1
-        className="animated-text"
+        className="animated-text-h1"
         initial={{ backgroundPosition: '-200% center' }}
         animate={{ backgroundPosition: '200% center' }}
         transition={{

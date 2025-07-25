@@ -1,0 +1,17 @@
+.animated-text-h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  background-size: 400% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  white-space: nowrap; /* evita salto en pantallas grandes */
+  display: inline-block;
+  text-align: center;
+}

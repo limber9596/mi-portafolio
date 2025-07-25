@@ -34,29 +34,9 @@
   -webkit-mask-composite: destination-in;
 }
 
-
-
 h1{
   margin-bottom: 10px;
   color: aliceblue;
-}
-
-.animated-text {
-  font-size: 2rem;
-  font-weight: bold;
-  color: transparent;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 0.5) 100%
-  );
-  background-size: 400% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  white-space: nowrap; /* evita salto en pantallas grandes */
-  display: inline-block;
-  text-align: center;
 }
 
 .animated-text .line {
@@ -66,14 +46,14 @@ h1{
 
 /* Para pantallas de 480px o menos */
 @media (max-width: 480px) {
-  .animated-text {
+  .animated-text-h1 {
     white-space: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .animated-text .line {
+  .animated-text-h1 .line {
     display: block;
     margin: 0.3rem 0;
   }
