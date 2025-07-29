@@ -1,7 +1,8 @@
 import '../styless/Technologies.css'
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaVuejs, FaBootstrap, FaSass, FaPhp, FaLaravel, FaNodeJs, FaGitAlt, FaAws } from 'react-icons/fa';
 import { SiExpress, SiPostman, SiJira, SiVercel, SiHostinger,SiMysql, SiMongodb } from 'react-icons/si';
-
+import { motion, useInView } from 'framer-motion';
+import "../styless/Global.css";
 const techData = {
   'Frontend': [
     { name: 'HTML', icon: <FaHtml5 /> },
@@ -33,13 +34,45 @@ const techData = {
 };
 
 export default function Technologies() {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.5,
+        ease: 'easeInOut',
+      },
+    }),
+  };
   return (
     <section id="technologies" className="technologies">
-      <h1>Tenologias</h1>
+      <motion.h1
+        className="animated-text-h1"
+        initial={{ backgroundPosition: '-200% center' }}
+        animate={{ backgroundPosition: '200% center' }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      >
+        Tecnologías
+      </motion.h1>
+
       <div className="technologies-container">
         <div className="tech-categories">
           {Object.entries(techData).map(([category, techs], idx) => (
-            <div className="tech-category" key={idx}>
+            <motion.div
+              key={idx}
+              className="tech-category"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+              variants={itemVariants}
+              custom={idx}
+            >
               <h3>{category}</h3>
               <ul className="tech-list">
                 {techs.map((tech, index) => (
@@ -49,7 +82,7 @@ export default function Technologies() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

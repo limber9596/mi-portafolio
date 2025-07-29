@@ -9,10 +9,9 @@
   align-items: center;
 }
 
-.about h2 {
+.about h1 {
   margin-bottom: 1rem;
   font-size: 2rem;
-  color: var(--color-blue);
 }
 
 .about p {

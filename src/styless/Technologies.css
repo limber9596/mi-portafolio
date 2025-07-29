@@ -3,7 +3,7 @@
   color: white;
   text-align: center; /* Opcional: si quieres color de fondo */
   scroll-margin-top: 20px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .technologies-container {
@@ -38,7 +38,7 @@
 .tech-category h3 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: var(--color-red);
+  color: var(--color-dark-red2);
 }
 
 .tech-list {
@@ -63,7 +63,8 @@
 @media(max-width: 596px) {
   
   .tech-category {
-    width: 90%;
+    width: 100%; /* Mejor que 250px fijo */
+    max-width: 400px;
   }
   
 }
