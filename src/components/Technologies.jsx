@@ -3,37 +3,34 @@ import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaVuejs, FaBootstrap, FaSass, FaPhp,
 import { SiExpress, SiPostman, SiJira, SiVercel, SiHostinger,SiMysql, SiMongodb } from 'react-icons/si';
 import { motion, useInView } from 'framer-motion';
 import "../styless/Global.css";
-const techData = {
-  'Frontend': [
-    { name: 'HTML', icon: <FaHtml5 /> },
-    { name: 'CSS', icon: <FaCss3Alt /> },
-    { name: 'JavaScript', icon: <FaJs /> },
-    { name: 'React', icon: <FaReact /> },
-    { name: 'Vue', icon: <FaVuejs /> },
-    { name: 'Bootstrap', icon: <FaBootstrap /> },
-    { name: 'Sass', icon: <FaSass /> }
-  ],
-  'Backend': [
-    { name: 'PHP', icon: <FaPhp /> },
-    { name: 'Laravel', icon: <FaLaravel /> },
-    { name: 'Node.js', icon: <FaNodeJs /> },
-    { name: 'Express', icon: <SiExpress /> },
-    { name: 'MySQL', icon: <SiMysql /> },
-    { name: 'MongoDB', icon: <SiMongodb /> }
-  ],
-  'Herramientas': [
-    { name: 'Git', icon: <FaGitAlt /> },
-    { name: 'Postman', icon: <SiPostman /> },
-    { name: 'Jira', icon: <SiJira /> }
-  ],
-  'Deploy y Hosting': [
-    { name: 'Vercel', icon: <SiVercel /> },
-    { name: 'Hostinger', icon: <SiHostinger /> },
-    { name: 'AWS Lightsail', icon: <FaAws /> }
-  ]
-};
+import React, { useEffect, useState } from 'react';
+import techsData from '../data/techs.json';
 
 export default function Technologies() {
+
+  const techs = techsData;
+
+  const iconMap = {
+    HTML: <FaHtml5 />,
+    CSS: <FaCss3Alt />,
+    JavaScript: <FaJs />,
+    React: <FaReact />,
+    Vue: <FaVuejs />,
+    Bootstrap: <FaBootstrap />,
+    Sass: <FaSass />,
+    PHP: <FaPhp />,
+    Laravel: <FaLaravel />,
+    "Node.js": <FaNodeJs />,
+    Express: <SiExpress />,
+    MySQL: <SiMysql />,
+    MongoDB: <SiMongodb />,
+    Git: <FaGitAlt />,
+    Postman: <SiPostman />,
+    Jira: <SiJira />,
+    Vercel: <SiVercel />,
+    Hostinger: <SiHostinger />,
+    "AWS Lightsail": <FaAws />
+  };
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i) => ({
@@ -63,9 +60,9 @@ export default function Technologies() {
 
       <div className="technologies-container">
         <div className="tech-categories">
-          {Object.entries(techData).map(([category, techs], idx) => (
+          {techs.map((category, idx) => (
             <motion.div
-              key={idx}
+              key={category.id}
               className="tech-category"
               initial="hidden"
               whileInView="visible"
@@ -73,12 +70,12 @@ export default function Technologies() {
               variants={itemVariants}
               custom={idx}
             >
-              <h3>{category}</h3>
+              <h3>{category.title}</h3>
               <ul className="tech-list">
-                {techs.map((tech, index) => (
+                {category.technologies.map((tech, index) => (
                   <li key={index} className="tech-item">
-                    <span className="tech-icon">{tech.icon}</span>
-                    {tech.name}
+                    <span className="tech-icon">{iconMap[tech]}</span>
+                    {tech}
                   </li>
                 ))}
               </ul>
@@ -86,6 +83,7 @@ export default function Technologies() {
           ))}
         </div>
       </div>
+
     </section>
   );
 }

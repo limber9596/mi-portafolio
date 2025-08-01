@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend",
+    "description": "Tecnologías utilizadas para el desarrollo del lado del cliente.",
+    "technologies": ["HTML", "CSS", "JavaScript", "React", "Vue", "Bootstrap", "Sass"]
+  },
+  {
+    "id": 2,
+    "title": "Backend",
+    "technologies": ["PHP", "Laravel", "Node.js", "Express", "MySQL", "MongoDB"]
+  },
+  {
+    "id": 3,
+    "title": "Herramientas",
+    "technologies": ["Git", "Postman", "Jira"]
+  },
+  {
+    "id": 4,
+    "title": "Deploy y Hosting",
+    "technologies": ["Vercel", "Hostinger", "AWS Lightsail"]
+  }
+]

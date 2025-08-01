@@ -3,14 +3,11 @@ import axios from 'axios';
 import '../styless/Projects.css';
 import { motion } from 'framer-motion';
 import "../styless/Global.css";
+import projectsData from '../data/projects.json';
 export default function Projects() {
-  const [projects, setProjects] = useState([]);
 
-  useEffect(() => {
-    axios.get('/data/projects.json')
-      .then((res) => setProjects(res.data))
-      .catch((err) => console.error('Error loading projects:', err));
-  }, []);
+  const projects = projectsData;
+
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -46,9 +43,9 @@ export default function Projects() {
             key={project.id}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }} // 🔁 Animación cada vez que entra al viewport
+            viewport={{ once: false, amount: 0.3 }} 
             variants={itemVariants}
-            custom={idx} // 👈 Muy importante para delay progresivo
+            custom={idx} 
           >
             <h3 className="card-title">{project.title}</h3>
 

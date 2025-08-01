@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "title": "Inventario",
+    "description": "Sistema de inventario y generacion de pdf.",
+    "technologies": ["React", "Stripe", "Node.js"],
+    "image": "/inv_home_mob.png",
+    "link": "https://mi-tienda.vercel.app"
+  }
+]
