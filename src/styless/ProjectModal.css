@@ -130,28 +130,27 @@ h1{
 }
 
 /* Responsive para móvil */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .screenshot-item {
     width: 100%;
+  }
+}
+
+@media (max-width: 462px) {
+  
+  .project-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .modal-content {
+    width: 98%;
+    padding: 1rem;
   }
   .header {
     width: 100%;
   }
 }
-
-@media (max-width: 450px) {
-  h1{
-    font-size: 1.5rem
-  }
-  p{
-    font-size: 0.9rem;
-  }
-  .project-link {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-}
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   h1{
     font-size: 1.3rem
   }
@@ -172,4 +171,4 @@ h1{
   .close-btn {
     font-size: 1.2rem;
   }
-}
+} */
