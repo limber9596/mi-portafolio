@@ -9,6 +9,7 @@
   --color-dark-red:#282020;
   --color-dark-red2: #6f5353;
   --color-blue: #5d95d2;
+  --color-dark-blue: #253039;
 }
 @keyframes moveBackground {
   0% {
@@ -21,7 +22,9 @@
     background-position: 0% 50%;
   }
 }
-
+* {
+  font-family: 'Poppins', sans-serif;
+}
 body {
   background: linear-gradient(135deg, #2C2C2C, #0D1B2A, #1B263B);
   background-size: 300% 300%;

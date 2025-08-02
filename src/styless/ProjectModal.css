@@ -1,0 +1,175 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border: 2px solid #ccc;
+}
+.content-header{
+  display: flex;
+  justify-content: center;
+}
+.header{
+  width: 92%;
+}
+h1{
+  color: var(--color-red);
+}
+.text{
+  padding-bottom: 20px;
+  color: aliceblue;
+}
+.title-image{
+  color: aliceblue;
+  padding-bottom: 10px;
+}
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.techh-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.techh-list li {
+  background: var(--color-dark-red2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-blue);
+  background: white;
+  color: var(--color-blue);
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tabs button.active,
+.tabs button:hover {
+  background-color: var(--color-blue);
+  color: white;
+}
+
+.screenshots-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.screenshot-item {
+  width: 45%;
+  text-align: center;
+}
+
+.screenshot-item img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  max-height: 300px;
+  object-fit: contain;
+  background-color: #253039;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive para móvil */
+@media (max-width: 600px) {
+  .screenshot-item {
+    width: 100%;
+  }
+  .header {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  h1{
+    font-size: 1.5rem
+  }
+  p{
+    font-size: 0.9rem;
+  }
+  .project-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 400px) {
+  h1{
+    font-size: 1.3rem
+  }
+  p{
+    font-size: 0.8rem;
+  }
+  .techh-list li {
+    font-size: 0.6rem;
+  }
+  .tabs button {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+  }
+  .project-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .close-btn {
+    font-size: 1.2rem;
+  }
+}

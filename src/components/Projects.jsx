@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import '../styless/Projects.css';
 import { motion } from 'framer-motion';
-import "../styless/Global.css";
 import projectsData from '../data/projects.json';
-export default function Projects() {
+import ProjectModal from './ProjectModal';
 
+export default function Projects() {
   const projects = projectsData;
 
+  // Estado para el modal y proyecto seleccionado
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -22,8 +24,20 @@ export default function Projects() {
     }),
   };
 
+  // Función para abrir modal y setear proyecto
+  function openModal(project) {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  }
+
+  // Función para cerrar modal
+  function closeModal() {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  }
+
   return (
-    <section className="projects" id='projects'>
+    <section className="projects" id="projects">
       <motion.h1
         className="animated-text-h1"
         initial={{ backgroundPosition: '-200% center' }}
@@ -36,6 +50,7 @@ export default function Projects() {
       >
         Mis Proyectos
       </motion.h1>
+
       <div className="project-cards">
         {projects.map((project, idx) => (
           <motion.div
@@ -43,9 +58,9 @@ export default function Projects() {
             key={project.id}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }} 
+            viewport={{ once: false, amount: 0.3 }}
             variants={itemVariants}
-            custom={idx} 
+            custom={idx}
           >
             <h3 className="card-title">{project.title}</h3>
 
@@ -54,15 +69,21 @@ export default function Projects() {
             </div>
 
             <div className="card-footer">
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <button>Más detalles</button>
-              </a>
+              {/* Cambia aquí el botón para abrir el modal */}
+              <button onClick={() => openModal(project)}>Más detalles</button>
             </div>
           </motion.div>
         ))}
       </div>
 
-
+      {/* Mostrar modal solo si isModalOpen es true y selectedProject no es null */}
+      {isModalOpen && selectedProject && (
+        <ProjectModal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          project={selectedProject}
+        />
+      )}
     </section>
   );
 }
