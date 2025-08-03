@@ -2,10 +2,11 @@
   {
     "id": 1,
     "title": "Inventario",
-    "description": "Sistema de inventario y generacion de pdf.",
+    "description": "Sistema de inventario y generacion de pdf. ",
+    "login": "usuario: public - contraseña: 1234",
     "technologies": ["React","Node.js","MongoDB"],
     "image": "/images/inventario/inv_home_mob.png",
-    "link": "https://mi-tienda.vercel.app",
+    "link": "https://inventory-pdf-react.vercel.app/",
     "screenshots": {
     "pc": [
       { "label": "Burgers", "url": "/images/inventario/burgers.PNG" },
@@ -28,30 +29,6 @@
       { "label": "Login", "url": "/images/inventario/login_mob.PNG" }
     ]
   }
-  },
-  {
-  "id": 2,
-    "title": "Inventario",
-    "description": "Sistema de inventario y generacion de pdf.",
-    "technologies": ["React","Node.js","MongoDB"],
-    "image": "/images/inventario/inv_home_mob.png",
-    "link": "https://mi-tienda.vercel.app"
-  },
-  {
-    "id": 3,
-    "title": "Inventario",
-    "description": "Sistema de inventario y generacion de pdf.",
-    "technologies": ["React","Node.js","MongoDB"],
-    "image": "/images/inventario/inv_home_mob.png",
-    "link": "https://mi-tienda.vercel.app"
-  }, 
-  {
-    "id": 4,
-    "title": "Inventario",
-    "description": "Sistema de inventario y generacion de pdf.",
-    "technologies": ["React","Node.js","MongoDB"],
-    "image": "/images/inventario/inv_home_mob.png",
-    "link": "https://mi-tienda.vercel.app"
   }
 
 ]

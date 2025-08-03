@@ -30,7 +30,7 @@ export default function ProjectModal({ isOpen, onClose, project }) {
              <button className="close-btn" onClick={onClose}> <b>X</b> </button>
             <h1 className="title-project">{project.title}</h1>
             <p className="text">{project.description}</p>
-      
+            <p className="text"><b>Login:</b> {project.login}</p>
               <ul className="techh-list">
                 {project.technologies.map((tech, i) => (
                   <li key={i}>{tech}</li>
