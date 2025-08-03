@@ -1,9 +1,26 @@
 // ProjectModal.jsx
 import "../styless/ProjectModal.css";
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
 export default function ProjectModal({ isOpen, onClose, project }) {
+
   if (!isOpen) return null;
   const [activeTab, setActiveTab] = useState('pc'); // 'pc' o 'mobile'
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.4,
+        ease: 'easeInOut',
+      },
+    }),
+  };
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -46,10 +63,18 @@ export default function ProjectModal({ isOpen, onClose, project }) {
           {activeTab === 'pc' && (
             <div className="screenshots-list">
               {project.screenshots.pc.map((shot, i) => (
-                <div key={i} className="screenshot-item">
-                  <p className="title-image"> <b>{shot.label}</b> </p>
+                <motion.div
+                  key={i}
+                  className="screenshot-item"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.2 }}
+                  variants={itemVariants}
+                  custom={i}
+                >
+                  <p className="title-image"><b>{shot.label}</b></p>
                   <img src={shot.url} alt={shot.label} />
-                </div>
+                </motion.div>
               ))}
             </div>
           )}
@@ -57,10 +82,18 @@ export default function ProjectModal({ isOpen, onClose, project }) {
           {activeTab === 'mobile' && (
             <div className="screenshots-list">
               {project.screenshots.mobile.map((shot, i) => (
-                <div key={i} className="screenshot-item">
-                  <p className="title-image"> <b>{shot.label}</b></p>
+                <motion.div
+                  key={i}
+                  className="screenshot-item"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.2 }}
+                  variants={itemVariants}
+                  custom={i}
+                >
+                  <p className="title-image"><b>{shot.label}</b></p>
                   <img src={shot.url} alt={shot.label} />
-                </div>
+                </motion.div>
               ))}
             </div>
           )}
