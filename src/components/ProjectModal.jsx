@@ -11,7 +11,7 @@ export default function ProjectModal({ isOpen, onClose, project }) {
         <div className="content-header">
           <div className="header">
              <button className="close-btn" onClick={onClose}> <b>X</b> </button>
-            <h1>{project.title}</h1>
+            <h1 className="title-project">{project.title}</h1>
             <p className="text">{project.description}</p>
       
               <ul className="techh-list">
