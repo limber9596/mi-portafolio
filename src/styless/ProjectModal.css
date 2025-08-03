@@ -4,7 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,6 +31,11 @@
 }
 h1{
   color: var(--color-red);
+  text-shadow:
+    -0.5px -0.5px 0 #ccc,
+     0.5px -0.5px 0 #ccc,
+    -0.5px  0.5px 0 #ccc,
+     0.5px  0.5px 0 #ccc;
 }
 .text{
   padding-bottom: 20px;
@@ -137,14 +142,17 @@ h1{
   .header {
     width: 100%;
   }
-}
-
-@media (max-width: 462px) {
-  
+  .screenshot-item img {
+    max-height: 500px;
+  }
   .project-link {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
   }
+}
+
+@media (max-width: 462px) {
+  
   .modal-content {
     width: 98%;
     padding: 1rem;
@@ -159,25 +167,3 @@ h1{
     max-height: 500px;
   }
 }
-/* @media (max-width: 400px) {
-  h1{
-    font-size: 1.3rem
-  }
-  p{
-    font-size: 0.8rem;
-  }
-  .techh-list li {
-    font-size: 0.6rem;
-  }
-  .tabs button {
-    font-size: 0.7rem;
-    padding: 0.3rem 0.7rem;
-  }
-  .project-link {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-  }
-  .close-btn {
-    font-size: 1.2rem;
-  }
-} */

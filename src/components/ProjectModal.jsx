@@ -47,7 +47,7 @@ export default function ProjectModal({ isOpen, onClose, project }) {
             <div className="screenshots-list">
               {project.screenshots.pc.map((shot, i) => (
                 <div key={i} className="screenshot-item">
-                  <p className="title-image">{shot.label}</p>
+                  <p className="title-image"> <b>{shot.label}</b> </p>
                   <img src={shot.url} alt={shot.label} />
                 </div>
               ))}
@@ -58,7 +58,7 @@ export default function ProjectModal({ isOpen, onClose, project }) {
             <div className="screenshots-list">
               {project.screenshots.mobile.map((shot, i) => (
                 <div key={i} className="screenshot-item">
-                  <p className="title-image"> {shot.label}</p>
+                  <p className="title-image"> <b>{shot.label}</b></p>
                   <img src={shot.url} alt={shot.label} />
                 </div>
               ))}
