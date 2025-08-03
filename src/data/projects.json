@@ -28,5 +28,30 @@
       { "label": "Login", "url": "/images/inventario/login_mob.PNG" }
     ]
   }
+  },
+  {
+  "id": 2,
+    "title": "Inventario",
+    "description": "Sistema de inventario y generacion de pdf.",
+    "technologies": ["React","Node.js","MongoDB"],
+    "image": "/images/inventario/inv_home_mob.png",
+    "link": "https://mi-tienda.vercel.app"
+  },
+  {
+    "id": 3,
+    "title": "Inventario",
+    "description": "Sistema de inventario y generacion de pdf.",
+    "technologies": ["React","Node.js","MongoDB"],
+    "image": "/images/inventario/inv_home_mob.png",
+    "link": "https://mi-tienda.vercel.app"
+  }, 
+  {
+    "id": 4,
+    "title": "Inventario",
+    "description": "Sistema de inventario y generacion de pdf.",
+    "technologies": ["React","Node.js","MongoDB"],
+    "image": "/images/inventario/inv_home_mob.png",
+    "link": "https://mi-tienda.vercel.app"
   }
+
 ]

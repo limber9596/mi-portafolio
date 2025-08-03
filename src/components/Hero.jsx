@@ -26,7 +26,7 @@ export default function Hero() {
       />
 
       <motion.h1
-        className="animated-text-h1"
+        className="animated-text-h1 title-hero"
         initial={{ backgroundPosition: '-200% center' }}
         animate={{ backgroundPosition: '200% center' }}
         transition={{

@@ -78,3 +78,14 @@
 .close-icon, .burger-icon {
   font-size: 2rem;
 }
+@media(max-width: 768px) {
+  .close-icon, .burger-icon {
+    font-size: 1.5rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+}
