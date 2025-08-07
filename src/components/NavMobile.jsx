@@ -17,6 +17,7 @@ export default function NavMobile() {
         <li><a href="#about" onClick={() => setMenuOpen(false)}>Sobre mí</a></li>
         <li><a href="#technologies" onClick={() => setMenuOpen(false)}>Tecnologías</a></li>
         <li><a href="#projects" onClick={() => setMenuOpen(false)}>Proyectos</a></li>
+        <li><a href="#certificates" onClick={() => setMenuOpen(false)}>Certificados</a></li>
       </ul>
     </nav>
   )

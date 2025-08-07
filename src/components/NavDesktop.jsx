@@ -9,6 +9,7 @@ export default function NavDesktop() {
         <li><a href="#about">Sobre mí</a></li>
         <li><a href="#technologies">Tecnologías</a></li>
         <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#certificates">Certificados</a></li>
       </ul>
     </nav>
   )

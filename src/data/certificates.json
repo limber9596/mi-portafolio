@@ -1,0 +1,17 @@
+
+[
+  {
+    "id": 1,
+    "title": "titulo profesional de Ingenieria en Sistemas",
+    "source": "UTM",
+    "date": "Abril 2023",
+    "image": "/images/certificates/titulo.png"
+  },
+  {
+    "id": 2,
+    "title": "Master en JavaScript, jQuery, Angular, NodeJS",
+    "source": "Udemy",
+    "date": "Abril 2023",
+    "image": "/images/certificates/cert_udemy_js.png"
+  }
+]
