@@ -17,7 +17,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: white;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   overflow: hidden;
@@ -72,6 +71,9 @@
   font-size: 1.3rem;
   cursor: pointer;
   color: white;
+}
+.title-cert{
+  color: #ccc;
 }
 @media (max-width: 795px) {
   .card_cert {

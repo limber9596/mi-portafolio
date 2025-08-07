@@ -37,6 +37,7 @@ const Certificates = () => {
         Certificados       
       </motion.h1>
       <div className="certificate-cards">
+
         {certificates.map((cert, idx) => (
           <motion.div
             className="card_cert"
@@ -50,6 +51,7 @@ const Certificates = () => {
             whileHover={width > 795 ? { scale: 1.05 } : false}
           >
             <img src={cert.image} alt={cert.title} />
+            <h3 className='title-cert'>{cert.title} - {cert.date}</h3>
           </motion.div>
         ))}
       </div>
