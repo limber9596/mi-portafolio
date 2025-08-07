@@ -9,7 +9,7 @@ export default function Hero() {
       className="hero"
       initial={{ opacity: 0, y: -200 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 1 }}
     >
       <motion.img

@@ -85,7 +85,7 @@
 }
 @media (max-width: 480px) {
   .certificates {
-    padding: 1rem 0.5rem;
+    padding: 1rem;
     scroll-margin-top: 60px;
   }
 }
