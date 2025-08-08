@@ -74,6 +74,8 @@
 }
 .title-cert{
   color: #ccc;
+  padding: 8px;
+  font-size: 16px;
 }
 @media (max-width: 795px) {
   .card_cert {

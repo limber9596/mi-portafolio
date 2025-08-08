@@ -30,9 +30,10 @@
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  width: 232px;
   text-align: left;
   border: 1px solid var(--color-dark-red2);
+  height: auto;
 }
 
 .tech-category h3 {
@@ -58,13 +59,4 @@
   font-size: 1.2rem;
   margin-right: 0.5rem;
   color: antiquewhite;
-}
-
-@media(max-width: 596px) {
-  
-  .tech-category {
-    width: 100%; /* Mejor que 250px fijo */
-    max-width: 400px;
-  }
-  
 }

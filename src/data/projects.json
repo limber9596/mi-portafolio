@@ -15,7 +15,6 @@
       { "label": "Gastos", "url": "/images/inventario/gastos.PNG" },
       { "label": "Historial", "url": "/images/inventario/historial.PNG" },
       { "label": "Home", "url": "/images/inventario/home.PNG" },
-      { "label": "Ingresos", "url": "/images/inventario/ingre.PNG" },
       { "label": "Login", "url": "/images/inventario/login.PNG" }
     ],
     "mobile": [
@@ -25,7 +24,6 @@
       { "label": "Gastos", "url": "/images/inventario/gastos_mob.PNG" },
       { "label": "Historial", "url": "/images/inventario/historial_mob.PNG" },
       { "label": "Home", "url": "/images/inventario/home_mob.PNG" },
-      { "label": "Ingresos", "url": "/images/inventario/ingre_mob.PNG" },
       { "label": "Login", "url": "/images/inventario/login_mob.PNG" }
     ]
   }
