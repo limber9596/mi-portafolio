@@ -1,32 +1,106 @@
 [
   {
     "id": 1,
-    "title": "Inventario",
+    "title": "Sistema de Inventario",
     "description": "Sistema de inventario y generacion de pdf. ",
     "login": "usuario: public - contraseña: 1234",
-    "technologies": ["React","Node.js","MongoDB"],
+    "technologies": ["React", "Node.js", "MongoDB"],
     "image": "/images/inventario/inv_home_mob.png",
     "link": "https://inventory-pdf-react.vercel.app/",
     "screenshots": {
-    "pc": [
-      { "label": "Burgers", "url": "/images/inventario/burgers.PNG" },
-      { "label": "Crear Burger", "url": "/images/inventario/crear_burger.PNG" },
-      { "label": "Detalle Gastos", "url": "/images/inventario/detalle-gastos.PNG" },
-      { "label": "Gastos", "url": "/images/inventario/gastos.PNG" },
-      { "label": "Historial", "url": "/images/inventario/historial.PNG" },
-      { "label": "Home", "url": "/images/inventario/home.PNG" },
-      { "label": "Login", "url": "/images/inventario/login.PNG" }
-    ],
-    "mobile": [
-      { "label": "Burgers", "url": "/images/inventario/burgers_mob.PNG" },
-      { "label": "Crear Burger", "url": "/images/inventario/crear_burger_mob.PNG" },
-      { "label": "Detalle Gastos", "url": "/images/inventario/detalle-gastos_mob.PNG" },
-      { "label": "Gastos", "url": "/images/inventario/gastos_mob.PNG" },
-      { "label": "Historial", "url": "/images/inventario/historial_mob.PNG" },
-      { "label": "Home", "url": "/images/inventario/home_mob.PNG" },
-      { "label": "Login", "url": "/images/inventario/login_mob.PNG" }
-    ]
+      "pc": [
+        { "label": "Burgers", "url": "/images/inventario/burgers.PNG" },
+        {
+          "label": "Crear Burger",
+          "url": "/images/inventario/crear_burger.PNG"
+        },
+        {
+          "label": "Detalle Gastos",
+          "url": "/images/inventario/detalle-gastos.PNG"
+        },
+        { "label": "Gastos", "url": "/images/inventario/gastos.PNG" },
+        { "label": "Historial", "url": "/images/inventario/historial.PNG" },
+        { "label": "Home", "url": "/images/inventario/home.PNG" },
+        { "label": "Login", "url": "/images/inventario/login.PNG" }
+      ],
+      "mobile": [
+        { "label": "Burgers", "url": "/images/inventario/burgers_mob.PNG" },
+        {
+          "label": "Crear Burger",
+          "url": "/images/inventario/crear_burger_mob.PNG"
+        },
+        {
+          "label": "Detalle Gastos",
+          "url": "/images/inventario/detalle-gastos_mob.PNG"
+        },
+        { "label": "Gastos", "url": "/images/inventario/gastos_mob.PNG" },
+        { "label": "Historial", "url": "/images/inventario/historial_mob.PNG" },
+        { "label": "Home", "url": "/images/inventario/home_mob.PNG" },
+        { "label": "Login", "url": "/images/inventario/login_mob.PNG" }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Generador de imagenes con IA",
+    "description": "Genera una imagen realista a partir de un propmt y un boceto de un mueble. ",
+    "login": "Autenticación con Google",
+    "technologies": ["React", "Node.js", "PostgreSQL"],
+    "image": "/images/generate/gen-login_mob.png",
+    "link": "https://generate-images-front.vercel.app/",
+    "screenshots": {
+      "pc": [
+        {
+          "label": "Home-boceto",
+          "url": "/images/generate/gen-home-boc_pc.png"
+        },
+        {
+          "label": "Home-texto",
+          "url": "/images/generate/gen-home-txt_pc.png"
+        },
+        {
+          "label": "Home-perfil",
+          "url": "/images/generate/gen-home-boc-prf_pc.png"
+        },
+        {
+          "label": "imagen-boceto",
+          "url": "/images/generate/gen-img1-boc_pc.png"
+        },
+        {
+          "label": "imagen-texto",
+          "url": "/images/generate/gen-img1-txt_pc.png"
+        },
+        {
+          "label": "login",
+          "url": "/images/generate/gen-login_pc.png"
+        }
+      ],
+      "mobile": [
+        {
+          "label": "Home-boceto",
+          "url": "/images/generate/gen-home-boc_mob.png"
+        },
+        {
+          "label": "Home-texto",
+          "url": "/images/generate/gen-home-txt_mob.png"
+        },
+        {
+          "label": "Home-perfil",
+          "url": "/images/generate/gen-home-prf_mob.png"
+        },
+        {
+          "label": "imagen-boceto",
+          "url": "/images/generate/gen-img1-boc_mob.png"
+        },
+        {
+          "label": "imagen-texto",
+          "url": "/images/generate/gen-img1-txt_mob.png"
+        },
+        {
+          "label": "login",
+          "url": "/images/generate/gen-login_mob.png"
+        }
+      ]
+    }
   }
-  }
-
 ]

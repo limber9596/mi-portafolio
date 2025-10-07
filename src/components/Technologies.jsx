@@ -1,13 +1,34 @@
-import '../styless/Technologies.css'
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaVuejs, FaBootstrap, FaSass, FaPhp, FaLaravel, FaNodeJs, FaGitAlt, FaAws } from 'react-icons/fa';
-import { SiExpress, SiPostman, SiJira, SiVercel, SiHostinger,SiMysql, SiMongodb } from 'react-icons/si';
-import { motion, useInView } from 'framer-motion';
+import "../styless/Technologies.css";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaVuejs,
+  FaBootstrap,
+  FaSass,
+  FaPhp,
+  FaLaravel,
+  FaNodeJs,
+  FaGitAlt,
+  FaAws,
+} from "react-icons/fa";
+import {
+  SiExpress,
+  SiPostman,
+  SiJira,
+  SiVercel,
+  SiHostinger,
+  SiMysql,
+  SiMongodb,
+  SiPostgresql,
+} from "react-icons/si";
+import { motion, useInView } from "framer-motion";
 import "../styless/Global.css";
-import React, { useEffect, useState } from 'react';
-import techsData from '../data/techs.json';
+import React, { useEffect, useState } from "react";
+import techsData from "../data/techs.json";
 
 export default function Technologies() {
-
   const techs = techsData;
 
   const iconMap = {
@@ -29,7 +50,8 @@ export default function Technologies() {
     Jira: <SiJira />,
     Vercel: <SiVercel />,
     Hostinger: <SiHostinger />,
-    "AWS Lightsail": <FaAws />
+    "AWS Lightsail": <FaAws />,
+    PostgreSQL: <SiPostgresql />,
   };
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -39,7 +61,7 @@ export default function Technologies() {
       transition: {
         delay: i * 0.2,
         duration: 0.5,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       },
     }),
   };
@@ -47,12 +69,12 @@ export default function Technologies() {
     <section id="technologies" className="technologies">
       <motion.h1
         className="animated-text-h1"
-        initial={{ backgroundPosition: '-200% center' }}
-        animate={{ backgroundPosition: '200% center' }}
+        initial={{ backgroundPosition: "-200% center" }}
+        animate={{ backgroundPosition: "200% center" }}
         transition={{
           duration: 4,
           repeat: Infinity,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         }}
       >
         Tecnologías
@@ -83,8 +105,6 @@ export default function Technologies() {
           ))}
         </div>
       </div>
-
     </section>
   );
 }
-

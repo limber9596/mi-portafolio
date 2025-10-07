@@ -1,12 +1,11 @@
 // ProjectModal.jsx
 import "../styless/ProjectModal.css";
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function ProjectModal({ isOpen, onClose, project }) {
-
   if (!isOpen) return null;
-  const [activeTab, setActiveTab] = useState('pc'); // 'pc' o 'mobile'
+  const [activeTab, setActiveTab] = useState("pc"); // 'pc' o 'mobile'
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -16,40 +15,47 @@ export default function ProjectModal({ isOpen, onClose, project }) {
       transition: {
         delay: i * 0.1,
         duration: 0.4,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       },
     }),
   };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content-project" onClick={(e) => e.stopPropagation()}>
-
+      <div
+        className="modal-content-project"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="content-header">
           <div className="header">
-             <button className="close-btn" onClick={onClose}> <b>X</b> </button>
+            <button className="close-btn" onClick={onClose}>
+              {" "}
+              <b>X</b>{" "}
+            </button>
             <h1 className="title-project">{project.title}</h1>
             <p className="text">{project.description}</p>
-            <p className="text"><b>Login:</b> {project.login}</p>
-              <ul className="techh-list">
-                {project.technologies.map((tech, i) => (
-                  <li key={i}>{tech}</li>
-                ))}
-              </ul>
-            
+
+            <p className="text">
+              <b>Login:</b> {project.login}
+            </p>
+            <ul className="techh-list">
+              {project.technologies.map((tech, i) => (
+                <li key={i}>{tech}</li>
+              ))}
+            </ul>
 
             {/* NAV de pestañas */}
             <div className="content-tabs">
               <nav className="tabs">
                 <button
-                  className={activeTab === 'pc' ? 'active' : ''}
-                  onClick={() => setActiveTab('pc')}
+                  className={activeTab === "pc" ? "active" : ""}
+                  onClick={() => setActiveTab("pc")}
                 >
                   Vista PC
                 </button>
                 <button
-                  className={activeTab === 'mobile' ? 'active' : ''}
-                  onClick={() => setActiveTab('mobile')}
+                  className={activeTab === "mobile" ? "active" : ""}
+                  onClick={() => setActiveTab("mobile")}
                 >
                   Vista Mobile
                 </button>
@@ -60,7 +66,7 @@ export default function ProjectModal({ isOpen, onClose, project }) {
 
         {/* Contenido según pestaña */}
         <div className="screenshots">
-          {activeTab === 'pc' && (
+          {activeTab === "pc" && (
             <div className="screenshots-list">
               {project.screenshots.pc.map((shot, i) => (
                 <motion.div
@@ -72,14 +78,16 @@ export default function ProjectModal({ isOpen, onClose, project }) {
                   variants={itemVariants}
                   custom={i}
                 >
-                  <p className="title-image"><b>{shot.label}</b></p>
+                  <p className="title-image">
+                    <b>{shot.label}</b>
+                  </p>
                   <img src={shot.url} alt={shot.label} />
                 </motion.div>
               ))}
             </div>
           )}
 
-          {activeTab === 'mobile' && (
+          {activeTab === "mobile" && (
             <div className="screenshots-list">
               {project.screenshots.mobile.map((shot, i) => (
                 <motion.div
@@ -91,7 +99,9 @@ export default function ProjectModal({ isOpen, onClose, project }) {
                   variants={itemVariants}
                   custom={i}
                 >
-                  <p className="title-image"><b>{shot.label}</b></p>
+                  <p className="title-image">
+                    <b>{shot.label}</b>
+                  </p>
                   <img src={shot.url} alt={shot.label} />
                 </motion.div>
               ))}
@@ -99,7 +109,12 @@ export default function ProjectModal({ isOpen, onClose, project }) {
           )}
         </div>
 
-        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-link"
+        >
           Visitar Proyecto
         </a>
       </div>
