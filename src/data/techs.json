@@ -21,7 +21,7 @@
   {
     "id": 3,
     "title": "Bases de Datos",
-    "technologies": ["MySQL", "MongoDB", "PostgreSQL"]
+    "technologies": ["MySQL", "PostgreSQL"]
   },
   {
     "id": 4,
@@ -31,6 +31,6 @@
   {
     "id": 5,
     "title": "Deploy y Hosting",
-    "technologies": ["Vercel", "Hostinger", "AWS Lightsail"]
+    "technologies": ["Vercel", "Hostinger"]
   }
 ]
