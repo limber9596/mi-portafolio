@@ -1,50 +1,116 @@
 .hero {
+  position: relative;
   height: 100vh;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  background: #0b0f1a; /* fallback */
 }
 
+/* Fondo futurista sutil */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 153, 255, 0.25),
+    rgba(138, 43, 226, 0.25),
+    rgba(0, 255, 200, 0.25)
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease infinite;
+  z-index: 0;
+}
+
+/* Overlay oscuro para mejorar contraste */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+/* Todo el contenido encima del fondo */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Botón */
 .hero .btn {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 10px 22px;
   background: var(--color-red);
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.hero .btn:hover {
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+/* Imagen */
 .hero-img {
   width: 200px;
-  border-radius: 3px;
+  border-radius: 6px;
   margin-bottom: 25px;
 
-  /* Desvanecido en lados: izquierda, derecha y abajo */
-  mask-image:
-    linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%),   /* borde abajo */
-    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%),  /* borde izquierda */
-    linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%);   /* borde derecha */
-  -webkit-mask-image:
-    linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%),
-    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%),
-    linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%);
-  
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%),
+    linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%),
+    linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%);
+  -webkit-mask-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 40%
+    ),
+    linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%),
+    linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%);
+
   mask-composite: intersect;
   -webkit-mask-composite: destination-in;
 }
 
-title-hero {
+/* Título */
+.title-hero {
   margin-bottom: 10px;
   color: aliceblue;
+  text-align: center;
 }
 
-.animated-text .line {
+/* Texto animado */
+.animated-text-h1 .line {
   display: inline;
   margin: 0 0.3rem;
 }
 
-/* Para pantallas de 480px o menos */
+/* Animación del gradiente */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Accesibilidad: reducir animaciones */
+@media (prefers-reduced-motion: reduce) {
+  .hero::before {
+    animation: none;
+  }
+}
+
+/* Responsive */
 @media (max-width: 480px) {
   .animated-text-h1 {
     white-space: normal;

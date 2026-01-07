@@ -35,9 +35,12 @@ export default function ProjectModal({ isOpen, onClose, project }) {
             <h1 className="title-project">{project.title}</h1>
             <p className="text">{project.description}</p>
 
-            <p className="text">
-              <b>Login:</b> {project.login}
-            </p>
+            {project.login && (
+              <p className="text">
+                <b>Login:</b> {project.login}
+              </p>
+            )}
+
             <ul className="techh-list">
               {project.technologies.map((tech, i) => (
                 <li key={i}>{tech}</li>

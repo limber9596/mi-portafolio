@@ -4,7 +4,7 @@
     "title": "Generador de imagenes con IA",
     "description": "Genera una imagen realista a partir de un propmt y un boceto de un mueble. ",
     "login": "Autenticación con Google",
-    "technologies": ["React", "Node.js", "PostgreSQL"],
+    "technologies": ["React", "Node.js", "PostgreSQL", "Github", "Vercel"],
     "image": "/images/generate/gen-login_mob.png",
     "link": "https://generate-images-front.vercel.app/",
     "screenshots": {
@@ -58,6 +58,52 @@
         {
           "label": "login",
           "url": "/images/generate/gen-login_mob.png"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": "Página web de Psicologo",
+    "description": "Sitio web desarrollado para un psicólogo, con estructura clara, diseño responsive y secciones informativas sobre el profesional.",
+    "technologies": ["React", "Html", "Css"],
+    "image": "/images/professionals/professionals_home_mob.png",
+    "link": "https://professionals-front.vercel.app/",
+    "screenshots": {
+      "pc": [
+        {
+          "label": "Home",
+          "url": "/images/professionals/professionals_home.png"
+        },
+        {
+          "label": "Acerca de mi",
+          "url": "/images/professionals/professionals_about.png"
+        },
+        {
+          "label": "Servicios",
+          "url": "/images/professionals/professionals_services.png"
+        },
+        {
+          "label": "Horario de atencion",
+          "url": "/images/professionals/professionals_schedule.png"
+        }
+      ],
+      "mobile": [
+        {
+          "label": "Home",
+          "url": "/images/professionals/professionals_home_mob.png"
+        },
+        {
+          "label": "Acerca de mi",
+          "url": "/images/professionals/professionals_about_mob.png"
+        },
+        {
+          "label": "Servicios",
+          "url": "/images/professionals/professionals_services_mob.png"
+        },
+        {
+          "label": "Horario de atencion",
+          "url": "/images/professionals/professionals_schedule_mob.png"
         }
       ]
     }

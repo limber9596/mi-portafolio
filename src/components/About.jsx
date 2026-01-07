@@ -1,6 +1,6 @@
-import '../styless/About.css'
-import '../styless/Global.css'
-import { motion } from 'framer-motion'
+import "../styless/About.css";
+import "../styless/Global.css";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
@@ -17,12 +17,12 @@ export default function About() {
           className="animated-text-h1"
           initial={true} // importante para que no reinicie animación infinita
           animate={{
-            backgroundPosition: ['-200% center', '200% center'],
+            backgroundPosition: ["-200% center", "200% center"],
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           }}
         >
           Sobre mí
@@ -37,14 +37,20 @@ export default function About() {
             opacity: {
               duration: 3,
               repeat: Infinity,
-              ease: 'easeInOut',
+              ease: "easeInOut",
             },
           }}
         >
-          Desarrollador Web Full Stack con más de 2 años de experiencia en desarrollo frontend y backend. He participado en proyectos reales en Ecuador, Guatemala y Chile, trabajando de forma remota con tecnologías como React, Laravel, Node.js, MySQL y MongoDB. Me enfoco en crear soluciones eficientes y escalables.
+          Desarrollador Backend Junior con experiencia práctica en proyectos
+          reales utilizando Laravel y Node.js. He participado en el desarrollo
+          de APIs REST, implementación de autenticación de usuarios (JWT y
+          OAuth), gestión de bases de datos MySQL y PostgreSQL, y despliegue de
+          aplicaciones web. Cuento con conocimientos en React para la
+          integración del frontend con servicios backend. Busco integrarme a un
+          equipo donde pueda seguir fortaleciendo mis habilidades backend y
+          aportar con responsabilidad, honestidad y compromiso.
         </motion.p>
       </motion.div>
     </motion.section>
-
-  )
+  );
 }
