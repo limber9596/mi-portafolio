@@ -44,15 +44,14 @@ export default function Technologies() {
     "Node.js": <FaNodeJs />,
     Express: <SiExpress />,
     MySQL: <SiMysql />,
-    MongoDB: <SiMongodb />,
+    PostgreSQL: <SiPostgresql />,
     Git: <FaGitAlt />,
     Postman: <SiPostman />,
     Jira: <SiJira />,
     Vercel: <SiVercel />,
     Hostinger: <SiHostinger />,
-    "AWS Lightsail": <FaAws />,
-    PostgreSQL: <SiPostgresql />,
   };
+
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i) => ({
@@ -65,20 +64,10 @@ export default function Technologies() {
       },
     }),
   };
+
   return (
     <section id="technologies" className="technologies">
-      <motion.h1
-        className="animated-text-h1"
-        initial={{ backgroundPosition: "-200% center" }}
-        animate={{ backgroundPosition: "200% center" }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        Tecnologías
-      </motion.h1>
+      <motion.h1 className="animated-text-h1">Tecnologías</motion.h1>
 
       <div className="technologies-container">
         <div className="tech-categories">
@@ -93,6 +82,12 @@ export default function Technologies() {
               custom={idx}
             >
               <h3>{category.title}</h3>
+
+              {category.description && (
+                <p className="tech-description">{category.description}</p>
+              )}
+
+              {/* Tecnologías */}
               <ul className="tech-list">
                 {category.technologies.map((tech, index) => (
                   <li key={index} className="tech-item">
@@ -101,6 +96,15 @@ export default function Technologies() {
                   </li>
                 ))}
               </ul>
+
+              {/* Highlights */}
+              {category.highlights && (
+                <ul className="tech-highlights">
+                  {category.highlights.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
+                </ul>
+              )}
             </motion.div>
           ))}
         </div>

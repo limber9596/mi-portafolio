@@ -60,3 +60,22 @@
   margin-right: 0.5rem;
   color: antiquewhite;
 }
+
+/* ////////////////////////////// */
+.tech-description {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.tech-highlights {
+  margin-top: 0.5rem;
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.tech-highlights li {
+  margin-bottom: 4px;
+}
