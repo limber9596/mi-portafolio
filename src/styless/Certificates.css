@@ -1,8 +1,8 @@
-.certificates{
+.certificates {
   padding: 4rem 2rem;
   text-align: center;
   min-height: 100vh;
-  scroll-margin-top: 20px;
+  scroll-margin-top: 40px;
 }
 
 .certificate-cards {
@@ -18,7 +18,7 @@
   flex-direction: column;
   justify-content: space-between;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 350px;
   transition: transform 0.3s ease;
@@ -48,11 +48,10 @@
   width: 850px;
   max-width: 100%;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border: 2px solid #ccc;
   margin: 0 auto;
 }
-
 
 .modal-content-cert img {
   width: 100%;
@@ -60,7 +59,6 @@
   border-radius: 8px;
   display: block;
 }
-
 
 .close-button {
   position: absolute;
@@ -72,7 +70,7 @@
   cursor: pointer;
   color: white;
 }
-.title-cert{
+.title-cert {
   color: #ccc;
   padding: 8px;
   font-size: 16px;

@@ -4,7 +4,7 @@
     "title": "Generador de imagenes con IA",
     "description": "Genera una imagen realista a partir de un propmt y un boceto de un mueble. ",
     "login": "Autenticación con Google",
-    "technologies": ["React", "Node.js", "PostgreSQL", "Github", "Vercel"],
+    "technologies": ["React", "Node.js", "PostgreSQL"],
     "image": "/images/generate/gen-login_mob.png",
     "link": "https://generate-images-front.vercel.app/",
     "screenshots": {

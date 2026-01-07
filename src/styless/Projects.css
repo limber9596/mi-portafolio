@@ -2,7 +2,7 @@
   padding: 4rem 2rem;
   text-align: center;
   min-height: 100vh;
-  scroll-margin-top: 20px;
+  scroll-margin-top: 40px;
 }
 
 .project-cards {
@@ -19,7 +19,7 @@
   justify-content: space-between;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 250px;
   transition: transform 0.3s ease;
