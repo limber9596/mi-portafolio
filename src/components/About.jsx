@@ -41,10 +41,10 @@ export default function About() {
             },
           }}
         >
-          Desarrollador Backend Junior con experiencia práctica en proyectos
-          reales utilizando Laravel y Node.js. He participado en el desarrollo
-          de APIs REST, implementación de autenticación de usuarios (JWT y
-          OAuth), gestión de bases de datos MySQL y PostgreSQL, y despliegue de
+          Desarrollador Backend con experiencia práctica en proyectos reales
+          utilizando Laravel y Node.js. He participado en el desarrollo de APIs
+          REST, implementación de autenticación de usuarios (JWT y OAuth),
+          gestión de bases de datos MySQL y PostgreSQL, y despliegue de
           aplicaciones web. Cuento con conocimientos en React para la
           integración del frontend con servicios backend. Busco integrarme a un
           equipo donde pueda seguir fortaleciendo mis habilidades backend y

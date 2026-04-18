@@ -48,7 +48,7 @@ export default function Hero() {
           opacity: { duration: 3, repeat: Infinity, ease: "easeInOut" },
         }}
       >
-        Desarrollador Backend Junior
+        Desarrollador Backend
       </motion.p>
 
       <motion.a
